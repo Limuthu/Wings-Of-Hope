@@ -20,7 +20,7 @@ body {
     height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-columns: 230px 1fr;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: 1fr 150px;
     grid-template-areas: 
         'nav hero'
@@ -55,6 +55,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .divs1:hover, 
@@ -151,6 +152,7 @@ body {
 
 .cancer--main h3 {
     font-size: 16px;
+    text-align: center;
 }
 
 .cancer--content {
@@ -195,4 +197,201 @@ body {
     text-align: center;
     padding-left: 10px;
     color: #e7e7e7;
+}
+
+@media (max-width: 905px) {
+
+    body {
+        overflow: scroll;
+    }
+
+    .page {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 90vh 100vh;
+        grid-template-areas: 
+        'hero hero'
+        'hero hero'
+        'cancer cancer';
+    }
+
+    .nav {
+        width: 100%;
+        height: 10vh;
+        background-color: transparent;
+        grid-area: nav;
+        position: absolute;
+        top: 0;
+    }
+
+    .burger {
+        width: 100%;
+        height: 10vh;
+        position: relative;
+    }
+    
+    .burgerr {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 100px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .line {
+        width: 25px;
+        height: 4px;
+        background-color: rgb(167, 133, 133);
+    }
+
+    .line2 {
+        margin-top: 3px;
+    }
+
+    .line3 {
+        margin-top: 3px;
+    }
+
+    .links {
+        display: none;
+    }
+    
+    .footer {
+        display: none;
+    }
+
+    .hero {
+        grid-area: hero;
+        background-image: url(/Img/tom-sodoge-SsIaLCKWnfM-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .hero--content {
+        width: max-content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .hero--content h1{
+        width: max-content;
+        text-align: center;
+        font-size: 33px;
+        color: #ececec;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+    }
+    
+    .hero--content h2 {
+        width: max-content;
+    }
+       
+    .buttons {
+        width: max-content;
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 20px;
+    }
+    
+    .button {
+        width: 130px;
+        height: 40px;
+        background: none;
+        outline: none;
+        border-radius: 5px;
+        border: 3px solid #000000;
+        color: #afafaf;
+        cursor: pointer;
+    }
+    
+    .hero--content h2 {
+        padding-top: 20px;
+        color: #fffefe;
+        font-size: 20px;
+    }    
+
+    .cancer {
+        grid-area: cancer;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    
+    .cancer--main {
+        flex: 1;
+        background-color: #a78585;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .cancer--main h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .cancer--content {
+        flex: 8;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #ca8e48;
+        flex-direction: column;
+    }
+    
+    .card {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        flex-direction: column;
+    }
+    
+    .icon {
+        color: #dbdbdb;
+        font-size: 60px;
+    }
+    
+    .card1 {
+        padding-left: 15px;
+    }
+    
+    .card2 {
+        padding-left: 20px;
+    }
+    
+    .card3 {
+        padding-left: 20px;
+    }
+    
+    .card--content p {
+        width: 93%;
+        font-size: 16px;
+        text-align: center;
+        padding-left: 10px;
+        padding-top: 10px;
+        color: #441010;
+    }
+    
+    .card--content h4 {
+        text-align: center;
+        padding-left: 10px;
+        color: #e7e7e7;
+    }
+    
 }
